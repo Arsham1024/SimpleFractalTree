@@ -3,11 +3,14 @@ function Branch(begin, end){
    this.end = end;
    this.finished = false;
 
+
    this.show = function(){
       stroke(255);
       line (this.begin.x , this.begin.y , this.end.x, this.end.y);
    }
 
+
+   //Right branch set up.
    this.branchR = function(){
       var dir = p5.Vector.sub(this.end, this.begin);
       dir.rotate(PI/6);
@@ -17,6 +20,7 @@ function Branch(begin, end){
       return right;
    }
 
+   //left branch set up.
    this.branchL = function(){
       var dir = p5.Vector.sub(this.end, this.begin);
       dir.rotate(-PI/4);
